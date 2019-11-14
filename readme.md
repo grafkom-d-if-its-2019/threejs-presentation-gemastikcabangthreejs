@@ -11,3 +11,5 @@ Anggota Kelompok
 
 
 [Proposal FP](Presentasi.pdf)
+
+Bermacam - macam loader dapat dilihat di https://github.com/josdirksen/learning-threejs/tree/master/libs
