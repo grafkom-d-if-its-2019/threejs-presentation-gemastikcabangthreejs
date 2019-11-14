@@ -1,4 +1,4 @@
-let scene = new THREE.Scene();
+var scene = new THREE.Scene();
 
 let camera = new THREE.PerspectiveCamera(
   45,
@@ -14,7 +14,7 @@ renderer.setClearColor(new THREE.Color(0xeeeeee));
 renderer.shadowMap.enabled = true;
 document.body.appendChild(renderer.domElement);
 
-var geometry = new THREE.BoxGeometry(20, 20, 20);
+var geometry = new THREE.BoxBufferGeometry(10, 10, 10);
 var cubeMaterial = new THREE.MeshBasicMaterial({
   color: 0x00ff00,
   transparent: true,
@@ -52,20 +52,25 @@ const addLight = () => {
   //   scene.add(...lamps);
 };
 
-const save_json = () => {
-  var result = cube.toJSON();
-  localStorage.setItem("json", JSON.stringify(result));
-  console.log(JSON.stringify(result));
+const save_json_scene = () => {
+  var exporter = new THREE.SceneExporter();
+  console.log(scene);
+  var sceneJson = JSON.stringify(exporter.parse(scene));
+  localStorage.setItem("scene", sceneJson);
+  console.log(sceneJson);
 };
 
-var json = localStorage.getItem("json");
-if (json) {
-  var loadedGeometry = JSON.parse(json);
-  var loader = new THREE.ObjectLoader();
-  loadedMesh = loader.parse(loadedGeometry);
-  loadedMesh.position.x -= 50;
-//   scene.add(loadedMesh);
-}
+const load_json_scene = () => {
+  var json = localStorage.getItem("scene");
+  var sceneLoader = new THREE.SceneLoader();
+  sceneLoader.parse(
+    JSON.parse(json),
+    function(e) {
+      scene = e.scene;
+    },
+    "."
+  );
+};
 
 camera.position.x = 0;
 camera.position.y = 0;
@@ -73,7 +78,8 @@ camera.position.z = 100;
 
 addLight();
 animate();
-save_json();
+save_json_scene();
+// load_json_scene();
 
 function animate() {
   requestAnimationFrame(animate);
