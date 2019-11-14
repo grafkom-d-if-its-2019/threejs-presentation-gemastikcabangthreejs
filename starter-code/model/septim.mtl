@@ -1,0 +1,16 @@
+# Blender MTL File: 'septim.blend'
+# Material Count: 1
+
+newmtl M_septim
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\fadhi\\AppData\\Local\\Temp\\maps\\septim\\2k_jpg\\septims_low_v004_Septim_Normal.jpg
+map_Kd C:\\Users\\fadhi\\AppData\\Local\\Temp\\maps\\septim\\2k_jpg\\septims_low_v004_Septim_BaseColor.jpg
+map_Ns C:\\Users\\fadhi\\AppData\\Local\\Temp\\maps\\septim\\2k_jpg\\septims_low_v004_Septim_Roughness.jpg
+refl C:\\Users\\fadhi\\AppData\\Local\\Temp\\maps\\septim\\septims_low_v003_Septim_Metallic.png
