@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "formatVersion": 3.2,
+    "type": "scene",
+    "generatedBy": "SceneExporter",
+    "objects": 3,
+    "geometries": 1,
+    "materials": 1,
+    "textures": 0
+  },
+  "urlBaseType": "relativeToScene",
+  "objects": {
+    "Object_9": {
+      "geometry": "Geometry_5",
+      "material": "Material_2",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "visible": true
+    },
+    "Object_10": {
+      "type": "PointLight",
+      "color": 16777215,
+      "intensity": 1,
+      "position": [-50, -25, 0],
+      "distance": 0
+    },
+    "Object_13": {
+      "type": "PointLight",
+      "color": 16777215,
+      "intensity": 1,
+      "position": [50, 25, 0],
+      "distance": 0
+    }
+  },
+  "geometries": {},
+  "materials": {
+    "Material_2": {
+      "type": "MeshBasicMaterial",
+      "parameters": {
+        "color": 65280,
+        "reflectivity": 1,
+        "transparent": true,
+        "opacity": 0.5,
+        "wireframe": false,
+        "wireframeLinewidth": 1
+      }
+    }
+  },
+  "textures": {},
+  "fogs": {},
+  "transform": {
+    "position": [0, 0, 0],
+    "rotation": [0, 0, 0],
+    "scale": [1, 1, 1]
+  },
+  "defaults": { "camera": "", "fog": "" }
+}
+
+
+
+
