@@ -10,4 +10,4 @@ Anggota Kelompok
 5. Miranda Manurung - 05111140000144
 
 
-[Proposal FP](ProposalFP.pdf)
+[Proposal FP](Presentasi.pdf)
