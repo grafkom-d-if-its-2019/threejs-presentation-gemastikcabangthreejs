@@ -1,61 +1,44 @@
 {
-    "metadata": {
-        "version": 4.5,
-        "type": "Object",
-        "generator": "Object3D.toJSON"
-    },
-    "geometries": [
-        {
-            "uuid": "F65F1F56-EDA3-4884-AFE7-6F3512931464",
-            "type": "BoxGeometry",
-            "width": 20,
-            "height": 20,
-            "depth": 20
-        }
-    ],
-    "materials": [
-        {
-            "uuid": "5FA986C7-EC4A-4738-960E-215ECCD82672",
-            "type": "MeshBasicMaterial",
-            "color": 65280,
-            "opacity": 0.5,
-            "transparent": true,
-            "depthFunc": 3,
-            "depthTest": true,
-            "depthWrite": true,
-            "stencilWrite": false,
-            "stencilWriteMask": 255,
-            "stencilFunc": 519,
-            "stencilRef": 0,
-            "stencilFuncMask": 255,
-            "stencilFail": 7680,
-            "stencilZFail": 7680,
-            "stencilZPass": 7680
-        }
-    ],
-    "object": {
-        "uuid": "26DE291D-F01C-4BFE-BB96-67C60095A545",
-        "type": "Mesh",
-        "layers": 1,
-        "matrix": [
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0,
-            0,
-            0,
-            0,
-            1
-        ],
-        "geometry": "F65F1F56-EDA3-4884-AFE7-6F3512931464",
-        "material": "5FA986C7-EC4A-4738-960E-215ECCD82672"
+  "metadata": {
+    "version": 4.5,
+    "type": "Object",
+    "generator": "Object3D.toJSON"
+  },
+  "geometries": [
+    {
+      "uuid": "F65F1F56-EDA3-4884-AFE7-6F3512931464",
+      "type": "BoxGeometry",
+      "width": 20,
+      "height": 20,
+      "depth": 20
     }
+  ],
+  "materials": [
+    {
+      "uuid": "5FA986C7-EC4A-4738-960E-215ECCD82672",
+      "type": "MeshBasicMaterial",
+      "color": 65280,
+      "opacity": 0.5,
+      "transparent": true,
+      "depthFunc": 3,
+      "depthTest": true,
+      "depthWrite": true,
+      "stencilWrite": false,
+      "stencilWriteMask": 255,
+      "stencilFunc": 519,
+      "stencilRef": 0,
+      "stencilFuncMask": 255,
+      "stencilFail": 7680,
+      "stencilZFail": 7680,
+      "stencilZPass": 7680
+    }
+  ],
+  "object": {
+    "uuid": "26DE291D-F01C-4BFE-BB96-67C60095A545",
+    "type": "Mesh",
+    "layers": 1,
+    "matrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+    "geometry": "F65F1F56-EDA3-4884-AFE7-6F3512931464",
+    "material": "5FA986C7-EC4A-4738-960E-215ECCD82672"
+  }
 }

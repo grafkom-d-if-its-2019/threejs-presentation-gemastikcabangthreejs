@@ -64,7 +64,7 @@ if (json) {
   var loader = new THREE.ObjectLoader();
   loadedMesh = loader.parse(loadedGeometry);
   loadedMesh.position.x -= 50;
-//   scene.add(loadedMesh);
+  scene.add(loadedMesh);
 }
 
 camera.position.x = 0;

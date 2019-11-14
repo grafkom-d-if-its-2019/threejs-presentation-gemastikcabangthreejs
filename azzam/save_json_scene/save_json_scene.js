@@ -21,7 +21,22 @@ var cubeMaterial = new THREE.MeshBasicMaterial({
   opacity: 0.5
 });
 var cube = new THREE.Mesh(geometry, cubeMaterial);
-scene.add(cube);
+// scene.add(cube);
+
+var link = document.createElement("a");
+link.style.display = "none";
+document.body.appendChild(link); // Firefox workaround, see #6594
+
+function save(blob, filename) {
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
+  // URL.revokeObjectURL( url ); breaks Firefox...
+}
+
+function saveString(text, filename) {
+  save(new Blob([text], { type: "text/plain" }), filename);
+}
 
 const addLight = () => {
   let lights = [];
@@ -54,10 +69,20 @@ const addLight = () => {
 
 const save_json_scene = () => {
   var exporter = new THREE.SceneExporter();
-  console.log(scene);
   var sceneJson = JSON.stringify(exporter.parse(scene));
   localStorage.setItem("scene", sceneJson);
   console.log(sceneJson);
+};
+
+const save_json_scene_gltf = () => {
+  // Instantiate a exporter
+  var exporter = new THREE.GLTFExporter();
+
+  // Parse the input and generate the glTF output
+  exporter.parse(scene, function(output) {
+    console.log(output);
+    saveString(output, "scene.gltf");
+  });
 };
 
 const load_json_scene = () => {
@@ -72,14 +97,45 @@ const load_json_scene = () => {
   );
 };
 
+const load_json_scene_gltf = () => {
+  // Instantiate a loader
+  var loader = new THREE.GLTFLoader();
+
+  // Load a glTF resource
+  loader.load(
+    // resource URL
+    "scene.gltf",
+    // called when the resource is loaded
+    function(gltf) {
+      scene.add(gltf.scene);
+
+      gltf.animations; // Array<THREE.AnimationClip>
+      gltf.scene; // THREE.Scene
+      gltf.scenes; // Array<THREE.Scene>
+      gltf.cameras; // Array<THREE.Camera>
+      gltf.asset; // Object
+    },
+    // called while loading is progressing
+    function(xhr) {
+      console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+    },
+    // called when loading has errors
+    function(error) {
+      console.log("An error happened");
+    }
+  );
+};
+
 camera.position.x = 0;
 camera.position.y = 0;
 camera.position.z = 100;
 
 addLight();
 animate();
-save_json_scene();
+// save_json_scene();
+// save_json_scene_gltf();
 // load_json_scene();
+load_json_scene_gltf();
 
 function animate() {
   requestAnimationFrame(animate);
