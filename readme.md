@@ -12,4 +12,6 @@ Anggota Kelompok
 
 [Proposal FP](Presentasi.pdf)
 
+
+[Link Presentasi](https://docs.google.com/presentation/d/17prRzRV1WfcKEVP179wIkMA0Amb_d3i-FteFsEFwlVc/edit?usp=sharing)<br>
 Bermacam - macam loader dapat dilihat di https://github.com/josdirksen/learning-threejs/tree/master/libs
