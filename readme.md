@@ -9,9 +9,5 @@ Anggota Kelompok
 4. Azzam Jihad Ulhaq - 05111140000132
 5. Miranda Manurung - 05111140000144
 
-
-[Proposal FP](Presentasi.pdf)
-
-
-[Link Presentasi](https://docs.google.com/presentation/d/17prRzRV1WfcKEVP179wIkMA0Amb_d3i-FteFsEFwlVc/edit?usp=sharing)<br>
+[Link Presentasi](https://docs.google.com/presentation/d/17prRzRV1WfcKEVP179wIkMA0Amb_d3i-FteFsEFwlVc/edit?usp=sharing)<br><br>
 Bermacam - macam loader dapat dilihat di https://github.com/josdirksen/learning-threejs/tree/master/libs
